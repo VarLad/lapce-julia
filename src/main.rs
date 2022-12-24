@@ -22,13 +22,20 @@ register_plugin!(State);
 fn initialize(params: InitializeParams) -> Result<()> {
     let document_selector: DocumentSelector = vec![DocumentFilter {
         // lsp language id
-        language: Some(String::from("language_id")),
+        language: Some(String::from("julia")),
         // glob pattern
-        pattern: Some(String::from("**/*.{ext1,ext2}")),
+        pattern: Some(String::from("**/*.{jl,julia}")),
         // like file:
         scheme: None,
     }];
-    let mut server_args = vec![];
+    
+    let mut server_args = vec![
+        "--startup-file=no".to_owned(),
+        "--history-file=no".to_owned(),
+        "--quiet".to_owned(),
+        "-e".to_owned(),
+        "using LanguageServer; runserver()".to_owned()
+    ];
 
     // Check for user specified LSP server path
     // ```
@@ -90,17 +97,17 @@ fn initialize(params: InitializeParams) -> Result<()> {
 
     let _ = match VoltEnvironment::operating_system().as_deref() {
         Ok("windows") => {
-            format!("{}.exe", "[filename]")
+            format!("{}.exe", "julia")
         }
-        _ => "[filename]".to_string(),
+        _ => "julia".to_string(),
     };
 
     // Plugin working directory
-    let volt_uri = VoltEnvironment::uri()?;
-    let server_uri = Url::parse(&volt_uri)?.join("[filename]")?;
+    // let volt_uri = VoltEnvironment::uri()?;
+    // let server_uri = Url::parse(&volt_uri)?.join("[filename]")?;
 
     // if you want to use server from PATH
-    // let server_uri = Url::parse(&format!("urn:{filename}"))?;
+    let server_uri = Url::parse(&format!("urn:julia"))?;
 
     // Available language IDs
     // https://github.com/lapce/lapce/blob/HEAD/lapce-proxy/src/buffer.rs#L173

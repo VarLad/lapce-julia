@@ -1,17 +1,14 @@
-name = "<plugin-name>"
-version = "0.0.0"
-author = "<your name>"
-display-name = "<plugin-display-name>"
-description = "<plugin-description>"
-wasm = "bin/<plugin-name>.wasm"
+name = "lapce-julia-ls"
+version = "0.0.3"
+author = "VarLad"
+display-name = "Julia (LanguageServer.jl)"
+description = "Julia plugin for the Lapce Editor - Powered by LanguageServer.jl"
+wasm = "bin/lapce-julia.wasm"
+icon = "juliadots-icon.png"
 
 [activation]
-language = []
-workspace-contains = []
-
-[config."volt.serverPath"]
-default = ""
-description = "Path to custom LSP executable"
+language = ["julia"]
+workspace-contains = ["*/Project.toml", "*/Manifest.toml"]
 
 # [config."volt.serverArgs"]
 # default = []
