@@ -9,7 +9,7 @@ repository = "https://github.com/VarLad/lapce-julia"
 
 [activation]
 language = ["julia"]
-workspace-contains = ["*/*.py"]
+workspace-contains = ["*/*.jl"]
 
 # [config."volt.serverArgs"]
 # default = []
