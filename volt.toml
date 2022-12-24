@@ -4,11 +4,12 @@ author = "VarLad"
 display-name = "Julia (LanguageServer.jl)"
 description = "Julia plugin for the Lapce Editor - Powered by LanguageServer.jl"
 wasm = "bin/lapce-julia.wasm"
-icon = "juliadots-icon.png"
+icon = "assets/juliadots-icon.png"
+repository = "https://github.com/VarLad/lapce-julia"
 
 [activation]
 language = ["julia"]
-workspace-contains = ["*/Project.toml", "*/Manifest.toml"]
+workspace-contains = ["*/*.py"]
 
 # [config."volt.serverArgs"]
 # default = []
