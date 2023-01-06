@@ -12,3 +12,7 @@ Lapce plugin for the Julia language powered by LanguageServer.jl
 ```
 
 in a Julia REPL.
+
+## Passing custom julia executable path
+
+In case you don't have julia on PATH, or your binary is named differently, as in the case of when its installed by `juliaup` (where its called `julialauncher`), you can still point to it in: Settings > Plugins > Julia (LanguageServer.jl)

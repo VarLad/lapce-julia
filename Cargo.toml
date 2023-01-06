@@ -1,7 +1,7 @@
 [package]
 edition = "2021"
 name = "lapce-julia"
-version = "0.0.3"
+version = "0.0.5"
 resolver = "2"
 
 [target.'cfg(target_os = "wasi")'.dependencies]

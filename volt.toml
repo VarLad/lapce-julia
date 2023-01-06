@@ -1,5 +1,5 @@
 name = "lapce-julia-ls"
-version = "0.0.3"
+version = "0.0.5"
 author = "VarLad"
 display-name = "Julia (LanguageServer.jl)"
 description = "Julia plugin for the Lapce Editor - Powered by LanguageServer.jl"
@@ -11,18 +11,6 @@ repository = "https://github.com/VarLad/lapce-julia"
 language = ["julia"]
 workspace-contains = ["*/*.jl"]
 
-# [config."volt.serverArgs"]
-# default = []
-# description = ""
-
-# [config."lspSettingArray"]
-# default = []
-# description = ""
-
-# [config."lspSettingString"]
-# default = ""
-# description = ""
-
-# [config."lspSettingBool"]
-# default = false
-# description = ""
+[config."lsp.serverPath"]
+default = ""
+description = "Path to custom julia binary"
