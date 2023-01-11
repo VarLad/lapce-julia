@@ -43,7 +43,7 @@ else
 fi
 ```
 
-Then in Lapce, point the custom julia executable path to (YOUR_HOME_FOLDER/.local/bin/flatpak/julia (for reference, look at the above section).
+Then in Lapce, point the custom julia executable path to `YOUR_HOME_FOLDER/.local/bin/flatpak/julia` (for reference, look at the above section).
 
-You can find YOUR_HOME_FOLDER with the following command `echo $HOME`(usually `/home/yourusername`).
+You can find `YOUR_HOME_FOLDER` with the following command: `echo $HOME`(usually `/home/yourusername`).
 Typically, the full path looks like `/home/username/.local/bin/flatpak/julia`.
