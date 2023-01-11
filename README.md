@@ -30,11 +30,11 @@ Make and edit a file with the following contents:
 ```sh
 #!/usr/bin/env sh
 
-flatpak-spawn --host $JULIA_PATH "$@"
+flatpak-spawn --host julia "$@"
 EOF
-chmod +x $HOME/.local/bin/flatpak/julia
 ```
 
+(Replace `julia` with `julialauncher` if you installed julia using `juliaup`) 
 Then make it executable by running
 
 `chmod +x /path/to/file`
