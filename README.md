@@ -35,8 +35,7 @@ EOF
 ```
 
 (Replace `julia` with `julialauncher` if you installed julia using `juliaup`) 
-Then make it executable by running
 
-`chmod +x /path/to/file`
+Then make it executable by running `chmod +x /path/to/file`
 
 Then in Lapce, in plugin's setting, point to the file in the custom julia executable path (discussed in the above section)
